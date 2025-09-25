@@ -26,22 +26,18 @@ while True:
          clear()
          continue
       case "2":
-         nome_arquivo = input("Nome do arquivo: ").strip().lower()
-         if nome_arquivo:
-            with open(f"Aula06/{nome_arquivo},json", "r", encoding="utf-8") as f:
-               dd_extinte = json.load(f)
+         with open(f"Aulas06/a.json", "r", encoding="utf-8") as f:
+            dd_extinte = json.load(f)
          
          dd_extinte.extend(usuario) # .extend(lst) -> junta lista
          
-         with open(f"Aula06/{nome_arquivo}.json", "w", encoding="utf-8") as f:
+         with open(f"Aulas06/a.json", "w", encoding="utf-8") as f:
             json.dump(user, f, ensure_ascii=False, indent= 2) # dump(list/dic, arquivo_lido, formatação_anbt, intentação)
          clear()
          print("Arquivo salvo")
          continue
       case "3":
-         if not nome_arquivo:
-            nome_arquivo = input("Digite o nome do aqrquivo: ").strip().lower()
-         with open(f"Aula06/{nome_arquivo}.json", "r", encoding="utf-8") as f:
+         with open(f"Aula06/a.json", "r", encoding="utf-8") as f:
             dados = json.load(f)
          for i in dados:
             for n in i:
