@@ -23,11 +23,11 @@ def print_tabuleiro():
     for i in range(len(tabuleiro)):
         for x in tabuleiro[i]:
             if x in tabuleiro[0]:
-                l0 = l0 + x
+                l0 += x
             elif x in tabuleiro[1]:
-                l1 = l1+x
+                l1 += x
             elif x in tabuleiro[2]:
-                l2 = l2+x
+                l2 += x
 
     def p_l(l):
         print(" "*43, end="")
@@ -229,4 +229,5 @@ def game():
                 is_loop = True
             victory()
         victory()
+
 game()
