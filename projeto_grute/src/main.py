@@ -1,4 +1,6 @@
-from banco import *
+from service.produdo import *
+from service.users import *
+
 from getpass import getpass
 from time import sleep as delay
 
@@ -12,9 +14,10 @@ def login():
     global user_id, user_email
     while True:
         clear()
+        print("Sitema de login", end=2*"\n")
         print("Logar na conta - 1")
         print("Criar conta    - 2")
-        print("Sair           - 3")
+        print("Sair           - 3", end=2*"\n")
         input_user = input("Digite uma opção: ").strip()
         if input_user == "2":
             print("Criação de conta")
